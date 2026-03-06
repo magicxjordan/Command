@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #080810;
+  --s1: #111118;
+  --s2: #18181f;
+  --s3: #21212b;
+  --border: #28283a;
+  --text: #eeeef8;
+  --muted: #5a5a7a;
+  --dim: #3a3a52;
+  --work: #c8f04a;
+  --music: #4af0c8;
+  --money: #f0a84a;
+  --chat: #c084fc;
+  --danger: #f04a8c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text); }
+body { font-family: 'DM Mono', monospace; }
+
+.font-syne { font-family: 'Syne', sans-serif; }
+
+/* scrollbar hide */
+.no-scroll::-webkit-scrollbar { display: none; }
+.no-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* animations */
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes fadeIn  { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bounce  { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+
+.anim-slide-up  { animation: slideUp .25s ease; }
+.anim-fade-in   { animation: fadeIn .2s ease; }
+
+.dot-bounce { animation: bounce 1.1s infinite; }
+.dot-bounce-2 { animation: bounce 1.1s .18s infinite; }
+.dot-bounce-3 { animation: bounce 1.1s .36s infinite; }
