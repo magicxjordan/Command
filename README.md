@@ -1,2 +1,0 @@
-# Command
-Command centr app
